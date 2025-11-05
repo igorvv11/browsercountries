@@ -1,10 +1,12 @@
 import ArticlesCardsGrid from "@/components/Card";
+import { HeroImageRight } from "@/components/HearderHero";
 
 export default function Home() {
   return (
     <div>
-      <h1>Home Page</h1>
-      <ArticlesCardsGrid />
+    
+      <HeroImageRight />
+      
     </div>
     );
 }

@@ -1,11 +1,12 @@
 // Import styles of packages that you've installed.
 // All packages except `@mantine/hooks` require styles imports
+import './globals.css';
 import '@mantine/core/styles.css';
 
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core';
 
 export const metadata = {
-  title: 'My Mantine app',
+  title: 'Buscar Países',
   description: 'I have followed setup instructions carefully',
 };
 
@@ -15,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" {...mantineHtmlProps}>
+    <html lang="pt-br" {...mantineHtmlProps}>
       <head>
         <ColorSchemeScript />
       </head>

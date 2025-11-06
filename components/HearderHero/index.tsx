@@ -13,7 +13,7 @@ export function HeroImageRight() {
       <Container size="lg">
         <div className="flex justify-between md:flex-col">
           <div className="pt-16 pb-16 mr-24 md:mr-0">
-            <Title className="text-white">
+            <Title className="text-white text-5xl md:text-3xl">
               Tudo{' '}
               <Text
                 component="span"
@@ -29,7 +29,7 @@ export function HeroImageRight() {
               className="w-100"
               mt={30}
               c="white" >
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eum ab aliquam sequi ad cum tempore, quam iure illo quibusdam quidem! Cumque harum quis non nobis laudantium a veritatis quaerat.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eum ab aliquam sequi ad cum tempore, quam iure illo quibusdam quidem! Cumque harum quis non nobis laudantium a veritatis quaerat.
             </Text>
 
             <Button

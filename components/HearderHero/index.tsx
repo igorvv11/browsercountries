@@ -38,6 +38,8 @@ export function HeroImageRight() {
               gradient={{ from: 'pink', to: 'yellow' }}
               size="xl"
               mt={40}
+              component="a"
+              href="/buscar"
             >
               Buscar
             </Button>

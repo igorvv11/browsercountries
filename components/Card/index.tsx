@@ -7,6 +7,7 @@ export function ArticlesCardsGrid() {
   const [countries, setCountries] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [busca, setBusca] = useState<any>('');
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -37,9 +38,15 @@ export function ArticlesCardsGrid() {
 
   if (error) {
     return <Text c="red">Error loading countries: {error}</Text>;
-  }
+  }  
 
-  const cards = countries.map((country) => (
+  
+
+  const filteredCountries = busca.length > 0
+    ? countries.filter(country => country.name.common.toLowerCase().includes(busca.toLowerCase()))
+    : countries;
+
+  const cards = filteredCountries.map((country) => (
     <Card
       key={country.name.common}
       p="md"
@@ -57,8 +64,13 @@ export function ArticlesCardsGrid() {
     </Card>
   ));
 
+
   return (
+    
     <Container py="xl">
+      <div>
+        <input type="text" placeholder="Busque o país" className="bg-gray-600" onChange={(e) => setBusca(e.target.value)} value={busca}/>
+      </div>
       <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={{ base: 0, sm: 'md' }}>
         {cards}
       </SimpleGrid>
